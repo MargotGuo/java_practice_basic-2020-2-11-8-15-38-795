@@ -1,13 +1,13 @@
 public enum Student {
-  LINDA("Linda", "Female"),
-  BOB("Bob","Male"),
-  SOLIDER("Solider", "Male"),
-  CINDY("Cindy", "Female");
+  LINDA("Linda", Gender.FEMALE),
+  BOB("Bob",Gender.MALE),
+  SOLIDER("Solider", Gender.MALE),
+  CINDY("Cindy", Gender.FEMALE);
 
   private final String name;
-  private final String gender;
+  private final Gender gender;
 
-  Student(String name, String gender) {
+  Student(String name, Gender gender) {
     this.name = name;
     this.gender = gender;
   }
@@ -17,6 +17,6 @@ public enum Student {
   }
 
   public String getGender() {
-    return gender;
+    return gender.getDescription();
   }
 }
